@@ -4,183 +4,185 @@ body, h1, h2, h3, p, dd, dt, dl, ul, li{
 
 }
 img{
-  display: block;
-  max-width: 100%;
+ display: block;
+ max-width: 100%;
 }
 ul{
-  list-style: none;
+ list-style: none;
 }
 body{
-  background-color: #faf6ed;
-  color: #222;
-  -webkit-front-smoothing: antialiased;
-  display: grid;
-  grid-template-columns: 1fr 120px minmax(300px,800px) 1fr;
+ background-color: #faf6ed;
+ color: #222;
+ -webkit-front-smoothing: antialiased;
+ display: grid;
+ grid-template-columns: 1fr 120px minmax(300px,800px) 1fr;
 
 }
 .secao{
-  display: grid;
-  margin-left: 1px;
-  grid-template-columns: 110px 300px 1fr ;
+ display: grid;
+ margin-left: 1px;
+ grid-template-columns: 110px 300px 1fr ;
+
  
-  
 }
 
 .menu{
-  grid-column: 2/5;
-  margin-top: 25px;
-  background: #fb5;
-   
+ grid-column: 2/5;
+ margin-top: 25px;
+ background: #fb5;
+  
 }
 .menu ul{
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 10px;
+ display: flex;
+ flex-wrap: wrap;
+ padding-left: 10px;
 
 
 }
 .navmenu li{
-  display: inline-block;
-  padding: 10px;
-  margin-right: 10px;
-  color:#222;
-  text-decoration:none;
-  font-family: monospace;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 0.1em;
-  cursor: pointer;
+ display: inline-block;
+ padding: 10px;
+ margin-right: 10px;
+ color:#222;
+ text-decoration:none;
+ font-family: monospace;
+ font-weight: bold;
+ text-transform: uppercase;
+ font-size: 0.875rem;
+ letter-spacing: 0.1em;
+ cursor: pointer;
 
 
 }
 .grid-section{
-  grid-column: 2/4;
+ grid-column: 2/4;
+ margin-left: 100px;
 }
 .secao .animais-descricao img{
-  width: 170px;
-  height: 200px;
+ width: 170px;
+ height: 200px;
 
 }
 .titulo{
-  font-family: georgia;
-  font-size: 6rem;
-  line-height: 1;
-  font-weight: 300;
-  margin-bottom: 1rem;
-  grid-column: 1;
+ font-family: georgia;
+ font-size: 6rem;
+ line-height: 1;
+ font-weight: 300;
+ margin-bottom: 1rem;
+ grid-column: 1;
 }
 
 .animais p{
-  font-family: Arial, Helvetica,;
-  line-height: 1.2;
-  margin-bottom: 1rem ;
+ font-family: Arial, Helvetica,;
+ line-height: 1.2;
+ margin-bottom: 1rem ;
 }
 .animais h2{
-  font-family: monospace;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: .1em;
- margin-bottom: 1rem;
- color: #E54;
+ font-family: monospace;
+ font-size: 1rem;
+ text-transform: uppercase;
+letter-spacing: .1em;
+margin-bottom: 1rem;
+color: #E54;
 }
 .animais h2::before{
-  content: "";
-  display: inline-block;
-  width: 40px;
-  height: 10px;
-  margin-right: 10px;
-  background: #fb5;
+ content: "";
+ display: inline-block;
+ width: 40px;
+ height: 10px;
+ margin-right: 10px;
+ background: #fb5;
 }
 .video{
-  overflow-x: scroll;
+ overflow-x: scroll;
 }
 .video li{
-  display: inline-block;
+ display: inline;
 }
 .secao .animais-lista {
-  height: 370px;
-  width: 350px;
-  overflow-y: scroll;
-  grid-column: 1;
+ height: 370px;
+ width: 350px;
+ overflow-y: scroll;
+ grid-column: 1;
 }
 .secao .animais-lista img{
-  height: 370px;
-  overflow-y: scroll;
-  grid-column: 1;
+ height: 370px;
+ overflow-y: scroll;
+ grid-column: 1;
 }
 .animais-lista li{
-  cursor: pointer;
+ cursor: pointer;
 }
 .secao .animais-descricao{
-  grid-column: 3;
-  margin-left: 30px ;
+ grid-column: 3;
+ margin-left: 30px ;
 
 }
 .animais-descricao ul{
-  margin-bottom: 3rem;
+ margin-bottom: 3rem;
 }
 
 
 
 @media (max-width:700px){
-  .body{
-    grid-template-columns: 1fr;
-  }
-  .menu,.grid-section{
-    grid-column: 1;
-  }
-  .grid-section{
-    grid-template-columns:100px 1fr ;
-    grid-gap: 10px;
-  }
-  .animais-lista{
-    grid-column: 1;
-  }
+ .body{
+   grid-template-columns: 1fr;
+ }
+ .menu,.grid-section{
+   grid-column: 1;
+ }
+ .grid-section{
+   grid-template-columns:100px 1fr ;
+   grid-gap: 10px;
+ }
+ .animais-lista{
+   grid-column: 1;
+ }
 
-  .grid-section h1{
-    font-size: 20px;
-  }
+ .grid-section h1{
+   font-size: 20px;
+ }
 }
 .js .js-tabcontent li{
-  display: none;
+ display: none;
 }
 
 .js-tabcontent li.ativo{
-  display: block !important;
-  animation: show .5s forwards;
+ display: block !important;
+ animation: show .5s forwards;
 }
 @keyframes show{
-  from{
-    opacity: 0;
-    transform: translate3d(-30px,0,0);
-  }
- to{
-   opacity: 1;
-   transform: (0,0,0);
+from{
+  opacity: 0;
+  transform: translate3d(-30px,0,0);
+}
+to{
+  opacity: 1;
+  transform: (0,0,0);
 
- }
+}
 
 }
 body section{
-  display: nome;
+ display: nome;
 }
 
 .js body section.ativo{
-  display: grid !important;
-  animation: show .5s forwards;
-  overflow-y:hidden;
-  padding: 10px;
+ display: grid !important;
+ animation: show .5s forwards;
+ overflow-y:hidden;
+ padding: 10px;
 }
 @keyframes show{
-  from{
-   opacity: 0;
-   transform: translate3d(-30px,0,0);
-  }
-  to{
-   opacity: 1;
-   transform: (0,0,0);
-  
-  }
+from{
+  opacity: 0;
+  transform: translate3d(-30px,0,0);
+}
+to{
+  opacity: 1;
+  transform: (0,0,0);
+ 
+
+}
 
 }
