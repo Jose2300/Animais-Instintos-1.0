@@ -2,13 +2,17 @@ function initTabNav() {
   const tabMenu = document.querySelectorAll('.js-tabmenu li');
   const tabContent = document.querySelectorAll('.js-tabcontent li');
   tabContent[0].classList.add('ativo');
+  tabContent[5].classList.add('ativo');
+  tabContent[10].classList.add('ativo');
   
   if(tabContent.length && tabMenu.length){
     function activeTab(index){
       tabContent.forEach((li)=>{
         li.classList.remove('ativo');
+        
       });
       tabContent[index].classList.add('ativo');
+      
   
     }
     tabMenu.forEach((itemMenu,index)=>{

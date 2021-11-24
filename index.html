@@ -1,16 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UFT-8">
-        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible"content="ie=edge">
-        <link rel="stylesheet" href="style.css">
-        <script defer src="script.js"></script>
-        <title>Jogo da Cobrinha</title>
-    </head>
-    <body>
-        <h1>Jogo da Cobrinha</h1>
-        <canvas id="snake" width="500" height="500"></canvas>  
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style copy.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script>
+    document.documentElement.className += ' js'
+  </script>
 
+  <title>Animais Em Extinção</title>
+
+</head>
+<body style="background-color: rgb(195, 253, 188);">
+  <nav class="menu navbar navbar-dark bg-dark fixed top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">A EXTINÇÃO ACONTECE!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class=" navmenu navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              Aves
+            </li>
+            <li class="nav-item"> Repteis</li>
+            <li class="nav-item"> Peixes</li>
+            <li class="nav-item"> Anfibios</li>
+            <li class="nav-item"> Mamiferos</li>
+           
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- menu de navegação para as seções-->
+ <!--  <nav class="menu"><!-- menu identifica a seção nav para manipular em css e js--> 
+    <!--<ul class="navmenu"><!-- navmenu identifica a seção ul dentro de nav para manipular em css e js
+      <li>Aves</li>
+      <li>Répteis</li>
+      <li>Peixes</li>
+      <li>Anfibios</li>
+      <li>Manmiferos</li>
+      <li><a href="https://festive-sinoussi-6f9606.netlify.app">Quiz</a></li>-->
+   <!-- </ul>
+  </nav>-->
+  <ul class="ongs"> <!-- seção de redirecionamento para as ONGs de proteção aos animais em extinção no Brasil -->
+    <p>Doe para alguma ONG de proteção aos animais !</p>
+
+      <li id="ArcaBrasil">
+      <a href="https://arcabrasil.org.br/" target="_blank">
+        <img src="img/logoArcaBrasil.png" alt="Logo da ONG: Arca Brasil">
+      </a>
+    </li>
+   
+    <li id="SaveBrasil">
+      <a href="http://savebrasil.org.br/" target="_blank">
+        <img src="http://savebrasil.org.br/assets/themes/savebr_site/assets/images/savebr-8514136d6e446b8309372c062da6531524d3babf84e9d683057e894ae1aecce2.svg" alt="Logo da ONG: Save Brasil">
+      </a>
+    </li>
+    <li id="ProjetoMucky">
+      <a href="https://www.projetomucky.org.br/" target="_blank">
+        <img src="img/logoProjetoMucky.png" alt="Logo da ONG: Projeto Mucky">
+      </a>
+    </li>
+    <li id="ProjetoTamar">
+      <a href="https://www.tamar.org.br/" target="_blank">
+        <img src="img/logoProjetoTamar.png" alt="Logo da ONG: Projeto Tamar">
+      </a>
+    </li>
+    <li id="SUIPA">
+      <a href="https://www.suipa.org.br/" target="_blank">
+        <img src="img/logoSUIPA.png" alt="Logo da ONG: SUIPA">
+      </a>
+    </li>
+  </ul>
+
+<!-- seção dos animais Aves--> 
+  <section class="grid-section"> <!-- grid-section identifica a seção para manipular em css e js--> 
+    <h1 class="titulo">Aves em Extinção</h1><!-- titulo identifica h1 dentro de grid-section para manipular somente esse h1 em css e js--> 
+    <div class="secao"><!-- essa div coloquei para criar uma grid sendo que por padrão a section é none css e js--> 
+   <ul class="animais-lista js-tabmenu"><!-- animais-lista serve para manipular todas as imagens dessa seção-->
+    <li>
+      <img src="img/arara-azul-635338985.jpg">
+      
+    </li>
+  
+    <li>
+      <img src="img/ararajuba-cke.jpg">
+      
+    </li>
+    
+    <li>
+      <img src="img/2-soldadinho-do-araripe.jpg">
+      
+    </li>
+    <li>
+      <img src="img/tucano.jpg">
+      
+    </li>
+    <li>
+      <img src="img/cabure.jpg">
+      
+    </li>
+ </ul>
+   
+  
+  <div class="animais-descricao "><!-- animais-descricao é a div referente as informações dos animais para manipular em css e js--> 
+  
+    <ul class="animais js-tabcontent"> <!--ul que essas informações coloquei cada informação dentro de uma lista para manipular todas ataves de animais-->
+      <li>
+      <h2> Arara-Azul-Pequena </h2>
+      <p>
+        A ave, natural da bacia do Rio Paraná, pertence à família das araras e também apresenta um rabo longo e um bico marcante. As últimas pesquisas de ornitólogos foram realizadas nos anos 90 e nenhuma população da espécie foi encontrada, embora existam boatos de que ainda restam alguns exemplares nas florestas no oeste do Paraguai. A extinção aconteceu principalmente pela destruição da palmeira Butia yatay, cujos frutos eram base alimentar da espécie.
+      </p>
+      
+        <img src="img/Arara-azul-grande-mapa.png">
+   
+     
+    </li>
+    <li>
+    <h2> Ararajuba</h2>
+      <p>
+        A ararajuba (Guaruba guarouba), também conhecida como Guaruba, é uma ave verde e amarela, que existe somente na Amazônia e vem sofrendo com o tráfico e o desmatamento do bioma.
+
+        Pouco se sabe sobre os hábitos da ararajuba, o que dificulta a sua conservação. Atualmente, segundo o Livro Vermelho do ICMBio (2016), ela é considerada em risco vulnerável de extinção.
+      </p>
+      <img src="img/Ararajuba-Mapa.png">
+
+    </li>
+    <li>
+    <h2> Soldadinho do Araripe</h2>
+    <p>
+      O soldadinho-do-araripe é a única ave endêmica (exclusiva) do Ceará (obs. pess. Weber Girão e Ciro Albano), sendo considerada uma das cinco espécies da fauna cearense mais ameaçadas de extinção global na lista oficial brasileira de 2003 (MMA/Ibama), onde é classificada como “Criticamente Em Perigo”, recebendo o mesmo status pela União Internacional para a Conservação da Natureza (BirdLife International 2004) em sua lista de espécies globalmente ameaçadas de extinção.
+    </p>
+    <img src="img/Antilophia_bokermanni_distribuition_map.svg.png">
+  </li>
+  <li>
+    <h2> Tucano-de-bico-preto </h2>
+    <p>
+      O Tucano-de-bico-preto vive em florestas tropicais da América do Sul. Essa linda ave está ameaçada de extinção principalmente devido à destruição de seus habitats naturais. Além disso, como são animais curiosos, são facilmente atraídos por traficantes de animais.
+    </p>
+    
+      <img src="img/mapaocorrencia.png">
+ 
+   
+  </li>
+  <li>
+    <h2> Caburé-de-pernambuco </h2>
+    <p>
+      Atualmente é considerada extinta pela lista de espécies ameaçadas do Brasil (ICMBIO 2014), uma vez que nunca mais foi registrada na natureza. Nas últimas décadas, sua vocalização tem sido experimentada em alguns remanescentes florestais do Pernambuco (inclusive nos dois onde havia registros antigos), na tentativa de atraí-la, mas apesar de haver comportamento agonísticos de outras aves, não houve resposta. Outros autores, como Pereira et al. (2014) também apontam a provável extinção da espécie, considerando que a mesma não é registrada há mais de uma década. Visto na natureza pela última vez em 2001.
+    </p>
+    
+      <img src="img/mapa-caburé.png">
+ 
+   
+  </li>
+  </ul>
+
+  </div>
+</div>
+
+<ul class="video"> <!-- area de videos informativos sobre os animais identificado por video para manipular em css e js-->
+  <li>
+    <iframe width="250" height="300"
+src="https://www.youtube.com/embed/n51US87QtLc">
+</iframe>
+  </li>
+  <li>
+
+<iframe width="250" height="300"
+src="https://www.youtube.com/embed/Q5mYPTmjwco" >
+</iframe>
+  </li>
+  <li>
+
+    <iframe width="250" height="300"
+    src="https://www.youtube.com/embed/dZwCDdU2gTc" >
+    </iframe>
+     </li>
+
+     
+</ul>
+ 
+  </section>
+  <!-- As proximas seções segue a mesma logica da primeira-->
+  <!-- seção dos animais Repteis--> 
+  <section class="grid-section"  id="repteis">
+    <h1 class="titulo">Répteis em Extinção</h1>
+    <div class="secao">
+   <ul class="animais-lista js-tabmenu" >
+    <li>
+      <img src="img/lagarto.jpg">
+      
+    </li>
+  
+    <li>
+      <img src="img/tartaruga-verde.jpg">
+      
+    </li>
+    
+    <li>
+      <img src="img/jararaca.jpg">
+      
+    </li>
+    
+    <li>
+      <img src="img/Jiboia.jpg">
+      
+    </li>
+    <li>
+      <img src="img/largatixa.png">
+      
+    </li>
+
+   </ul>
+  <div class="animais-descricao" >
+  
+    <ul class="animais js-tabcontent">
+     
+    <li>
+    <h2> O lagarto Stenocercus dumerilii </h2>
+      <p>
+        O lagarto Stenocercus dumerilii só é conhecido do Brasil, nos estados do Maranhão, Pará e Tocantins. A sua distribuição está relacionada a manchas isoladas de florestas semi-abertas.Nas últimas décadas, esses ambientes vêm perdendo espaço para agriculturas perenes, pastagens e no crescimento urbano, no Maranhão, também para plantações de eucalipto, assentamentos agrários e os impactos da expansão da Estrada de Ferro Carajás. A destruição do seu ambiente ameaça o futuro da espécie, que está ameaçada de extinção.
+      </p>
+      <img src="img/mapa lagarto.jpg">
+
+    </li>
+    <li>
+    <h2>Tartaruga Verde </h2>
+    <p>
+      Tartaruga verde ,aruanã ou uruanã ,é herbívora e habita pastagens tropicais e subtropicais das bacias oceânicas do planeta. Na cidade de Trindade (ES) se destaca pelo maior sítio reprodutivo da espécie; em segundo lugar fica o Atol das Rocas (RN) seguido por Fernando de Noronha, onde tem apresentado redução drástica no número de desovas devido à exploração humana. De cada mil filhotes que nascem, somente um ou dois conseguem atingir a maturidade.
+       
+    <img src="img/mapa-tartaruga.jpg">
+  </li>
+  <li>
+    <h2>A jararaca-de-alcatrazes </h2>
+    <p>
+      A jararaca-de-alcatrazes é ativa durante a noite, sobretudo no chão ou na vegetação rasteira. Já durante o dia prefere repousar sobre troncos caídos, folhas de palmeiras ou em bromélias no chão. Uma de suas estratégias de alimentação é ficar sob os poleiros de aves marinhas. A razão: a presença de centopeias no ambiente, um de seus “pratos” preferidos. A principal ameaça à existência desta espécie foram os exercícios de artilharia realizados pela Marinha brasileira. Além do impacto dos projéteis, vez ou outra aconteciam incêndios de grandes proporções.
+       
+    <img src="img/mapa jararaca.png">
+  </li>
+  <li>
+    <h2>A jiboia do Ribeira </h2>
+    <p>
+      A jiboia do Ribeira, ameaçada de extinção e também conhecida como a mais rara do mundo. Entre essas nove cobras registradas, somente três foram encontradas com vida: a primeira delas em 1953, quando foi descrita por um pesquisador do Instituto Butantan,  Alphonse Richard Hoge. As duas últimas, após o início das atividades de educação ambiental do Projeto Jiboia do Ribeira, em Sete Barras, São Paulo. A jiboia do Ribeira é endêmica do Vale do Ribeira, ou seja, encontrada exclusivamente na região da Mata Atlântica
+
+       
+    <img src="img/mapa jiboia.png">
+  </li>
+  <li>
+    <h2>A lagartixa de areia (Liolaemus lutzae) </h2>
+    <p>
+      A lagartixa de areia (Liolaemus lutzae) é um pequeno réptil de uns 8 cm que habita em dunas em restingas.  Ela se alimenta de insetos quando jovens e apenas quatro espécies de plantas da restinga que acumulam água quando adultas. Sua reprodução ocorre uma vez só na vida e cada casal produz apenas quatro ovos, o que torna o crescimento populacional dessa espécie muito lento. A crescente ocupação urbana do litoral brasileiro tem empurrado essa lagartixa para mais perto do abismo da extinção.
+       
+    <img src="img/mapa largatixa.png">
+  </li>
+  </ul>
+
+  </div>
+    </div>
+  </section>
+  <section class="grid-section"  id="peixes">
+    <h1 class="titulo">Peixes em Extinção</h1>
+    <div class="secao">
+   <ul class="animais-lista js-tabmenu" >
+    <li>
+      <img src="img/tubarao1.png">
+      
+    </li>
+
+    <li>
+      <img src="img/peixe02.png">
+      
+    </li>
+    
+    <li>
+      <img src="img/tubarao02.png">
+      
+    </li>
+    <li>
+      <img src="img/tubarao03.png">
+      
+    </li>
+    <li>
+      <img src="img/dourado.jpg">
+      
+    </li>
+    
+
+   </ul>
+  <div class="animais-descricao" >
+  
+    <ul class="animais js-tabcontent">
+     
+    <li>
+    <h2> Carcharhinus porosus – Tubarão azeiteiro </h2>
+      <p>
+        O tubarão de cauda pequena(Tubarão azeiteiro) (Carcharhinus porosus) é uma espécie de tubarão réquiem e faz parte da família Carcharhinidae. É encontrada no oeste do Oceano Atlântico, desde o norte do Golfo do México até o sul do Brasil. Habita águas rasas perto da costa, particularmente em fundos lamacentos ao redor de estuários. Ele tende a nadar baixo na coluna d'água e forma grandes agregações segregadas por sexo. Uma espécie esguia geralmente não excedendo 1,1 m (3,6 pés) de comprimento, o tubarão de cauda pequena tem um focinho pontudo bastante longo, uma primeira nadadeira dorsal larga e triangular e uma segunda nadadeira dorsal que se origina no ponto médio da base da nadadeira anal. É de cor cinza liso, sem marcas proeminentes nas nadadeiras.
+
+        A dieta do tubarão de cauda pequena consiste principalmente em peixes ósseos, como corvinas, enquanto crustáceos, cefalópodes e tubarões menores e raias também podem ser consumidos. É vivíparo, o que significa que os embriões em desenvolvimento são sustentados por uma conexão placentária. As fêmeas geram ninhadas de dois a nove filhotes em um ciclo bienal, após um período de gestação de aproximadamente 12 meses. O tubarão de rabo pequeno é frequentemente capturado como captura acidental e pode ser usado para carne, barbatanas, óleo de fígado, cartilagem e farinha de peixe. Parece ter diminuído significativamente desde a década de 1980. Portanto, a União Internacional para a Conservação da Natureza listou-o como criticamente ameaçado.
+        
+      </p>
+      <img src="img/mapatubarao01.png">
+
+    </li>
+    <li>
+    <h2>Leporinus friderici. Aracu  </h2>
+    <p>
+      Distribuição geográfica
+  Sua espécie é distribuída nas Bacias Amazônica, Araguaia-Tocantins e Prata.
+Habitat
+O Piau-Três-Pintas habita margens de rios, lagos e florestas inundadas.
+Alimentação
+É um peixe onívoro, com tendência a carnívoros (principalmente insetos) ou frugívoro (frutos e sementes pequenas), dependendo da oferta de alimentos.
+
+Reprodução
+É um peixe que realiza a desova total, ou Piracema, fazendo longas migrações rio acima para se reproduzir.
+
+Características     
+O Piau-Três-Pintas é um peixe de escamas, muito importante para a pesca de subsistência e para o comércio local, mercados e feiras. Possui coloração prata, com 3 manchas escuras nos flancos. Daí o seu nome. Tem nadadeiras ligeiramente douradas e nadadeira caudal escura. Possui dentes em forma de pinça. Pode alcançar 40 cm de comprimento e 2 kg de peso.
+
+       
+    <img src="img/mapapeixe02.png">
+  </li>
+  <li>
+    <h2>Carcharhinus signatus – Tubarão toninha</h2>
+    <p>
+      O tubarão noturno(Tubarão toninha) ,(Carcharhinus signatus) é uma espécie de tubarão réquiem, da família Carcharhinidae, encontrado nas águas temperadas e tropicais do Oceano Atlântico. Habitante da plataforma continental externa e da encosta continental superior, este tubarão ocorre mais comumente em profundidades de 50-600 m (160-1.970 pés) e realiza uma migração vertical diária, passando o dia em águas mais profundas e movendo-se para águas mais rasas à noite . Ao largo do nordeste do Brasil, um grande número se reúne em torno de montes submarinos de profundidades variadas. Uma espécie esguia e aerodinâmica, o tubarão noturno atinge tipicamente um comprimento de 2 m (6,6 pés). Pode ser identificado pelo focinho longo e pontudo e olhos grandes e verdes (quando vivo), sendo azul acinzentado escuro ou marrom na parte superior e branco na parte inferior.
+
+      Os tubarões noturnos são predadores rápidos, noturnos e ativos, que se alimentam principalmente de pequenos peixes ósseos e lulas. A reprodução é vivípara como com os outros membros de sua família; as fêmeas acasalam durante o verão e dão à luz ninhadas de geralmente 12-18 filhotes após um período de gestação de um ano. Esta espécie de águas profundas não é considerada um perigo para os humanos. É capturado incidentalmente pela pesca comercial de atum e espadarte com palangre no Atlântico ocidental, e também por uma pescaria de palangre direcionada que opera no nordeste do Brasil. O tubarão noturno é altamente valorizado por suas barbatanas e, adicionalmente, como fonte de carne, óleo de fígado e farinha de peixe. No entanto, descobriu-se que a maioria dos tubarões capturados no nordeste do Brasil contém concentrações perigosas de mercúrio.
+      
+      Por causa de sua baixa taxa reprodutiva e declínios historicamente documentados em áreas como o Caribe, o tubarão noturno foi avaliado como vulnerável pela American Fisheries Society. Uma avaliação populacional indicou que esta espécie está segura nas águas dos Estados Unidos, mas isso pode não ser verdade em outros lugares.
+      Mustelus schmitti -cação-cola-fina
+      
+       
+    <img src="img/tubarao02mapa.png">
+  </li>
+  <li>
+    <h2>Mustelus schmitti -cação-cola-fina</h2>
+    <p>
+      
+   O tubarão-branco estreito (Mustelus schmitti) é um tubarão-cão da família Triakidae. É encontrada nas plataformas continentais do Atlântico sudoeste subtropical, do sul do Brasil ao norte da Argentina, entre as latitudes 30 ° S e 44 ° S, em profundidades entre 60 ma 195 m. Pode atingir 74 centímetros de comprimento.
+
+   Os cães lisos estreitos se alimentam de caranguejos e provavelmente de outros crustáceos e, presumivelmente, de peixes pequenos. Os cães lisos estreitos também são capturados e utilizados para consumo humano.
+
+    A reprodução deste houndshark é ovovivípara, com 2 a 7 filhotes por ninhada e um comprimento de nascimento de cerca de 26 cm.
+
+
+
+       
+    <img src="img/tubarao03mapa.png">
+  </li>
+  <li>
+    <h2>Salminus brasiliensis – (Dourado)</h2>
+    <p>
+      Famoso peixe do Brasil, o dourado é outra espécie de peixe que figura, infelizmente, a lista dos que estão ameaçados de extinção.  Pode atingir a marca de mais de 1 metro de comprimento, chegando a pesar mais de 30 quilos.  Seu período de reprodução ocorre dentre os meses de novembro e fevereiro.  O problema maior no caso da sua inclusão na lista de extinção não é, necessariamente, por causa da destruição de seu habitat, mas sim, por causa da pesca desenfreada desencadeada por causa do sabor do peixe, que é considerada inigualável, aliada à prática do esporte de pesca, já que o peixe é considerado difícil de ser pescado, segundo alguns esportistas. Por conta disso, para evitar que o peixe desaparecesse por completo, foi determinada a “Piracema”, que é o período de reprodução do peixe, onde fica proibida a pesca e captura desse exemplar durante os meses de sua reprodução, sob pena de reclusão e multa, sendo ela, muitas vezes, bem salgada.</p>
+<
+    
+  </li>
+  </ul>
+
+  </div>
+    </div>
+  </section>
+  
+
+
+  <script src="main.js"></script>
+  
+</body>
 </html>

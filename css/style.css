@@ -25,7 +25,9 @@ body{
 
  
 }
-
+.offcanvas{
+  margin-left: 5030px;
+}
 .menu{
  grid-column: 2/5;
  margin-top: 25px;
