@@ -4,6 +4,8 @@ function initTabNav() {
   tabContent[0].classList.add('ativo');
   tabContent[5].classList.add('ativo');
   tabContent[10].classList.add('ativo');
+  tabContent[15].classList.add('ativo');
+  tabContent[20].classList.add('ativo');
   
   if(tabContent.length && tabMenu.length){
     function activeTab(index){
