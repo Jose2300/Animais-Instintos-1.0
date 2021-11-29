@@ -56,10 +56,12 @@ body{
 
 
 }
-.grid-section{
+body .grid-section {
  grid-column: 2/4;
- margin-left: 100px;
+ margin-left: 5px;
 }
+
+
 .secao .animais-descricao img{
  width: 170px;
  height: 200px;
@@ -123,27 +125,55 @@ color: #E54;
 .animais-descricao ul{
  margin-bottom: 3rem;
 }
+.ongs{
+  grid-column: 1
+  ;
+}
+
 
 
 
 @media (max-width:700px){
  .body{
-   grid-template-columns: 1fr;
+   grid-template-columns:100px 1fr;
  }
- .menu,.grid-section{
-   grid-column: 1;
+ .menu{
+   grid-column: 1/4;
  }
  .grid-section{
-   grid-template-columns:100px 1fr ;
-   grid-gap: 10px;
+   grid-template-columns: 1fr;
+
+   grid-column: 2;
  }
- .animais-lista{
+ .secao .titulo{
+   grid-column: 2;
+ }
+ .secao .animais-descricao{
+  grid-column: 2;
+ 
+ }
+ .secao .animais-lista img{
+  height: 100px;
+  width: 100px;
+
+ }
+ .secao .animais-lista{
+   grid-column: 1/2;
+   height: 300px;
+   width: 160px;
+ }
+ .ongs{
    grid-column: 1;
  }
 
- .grid-section h1{
+ body .grid-section h1{
    font-size: 20px;
+   grid-column: 1/3;
  }
+ .secao .video{
+   grid-column: 2;
+ }
+
 }
 .js .js-tabcontent li{
  display: none;
