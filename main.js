@@ -25,7 +25,7 @@ function initTabNav() {
     });
   }
 }
-
+window.alert("Clique nas imagens para obter as informações dos animais");
 initTabNav();/* função para as imagens onde no evento de clique do animal a descrição aparece onde ele associa a li do da imagem a li de descrição */
  
 function initNav(){
